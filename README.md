@@ -49,7 +49,7 @@ python codev_1.py
 
 ## Автор
 
-YOUR_NAME
+Ostap камернік
 
 ## Ліцензія
 
