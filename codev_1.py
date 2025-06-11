@@ -7882,17 +7882,19 @@ def start_new_scan():
         
         if not detected_cameras:
             log("[!] Не знайдено потенційних камер у мережі")
-            messagebox.showinfo("Результат сканування", "Не знайдено потенційних камер у мережі")
+  
+            root.after(0, lambda: messagebox.showinfo("Результат сканування", "Не знайдено потенційних камер у мережі"))
             status_var.set("Сканування завершено - камери не знайдені")
             progress_var.set(100)
             return
             
-        show_camera_selection_window(detected_cameras)
+        root.after(0, lambda: show_camera_selection_window(detected_cameras))
         
     except Exception as e:
         log(f"[!] Помилка під час сканування: {str(e)}")
         traceback.print_exc()
-        messagebox.showerror("Помилка", f"Сталася помилка під час сканування: {str(e)}")
+  
+        root.after(0, lambda: messagebox.showerror("Помилка", f"Сталася помилка під час сканування: {str(e)}"))
         
     finally:
         progress_var.set(100)
