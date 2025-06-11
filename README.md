@@ -24,7 +24,7 @@
 
 ```bash
 # Клонування репозиторію
-git clone https://github.com/YOUR_USERNAME/ip-camera-scanner.git
+git clone https://github.com/ostapuska/ip-camera-scanner.git
 cd ip-camera-scanner
 
 # Встановлення залежностей
